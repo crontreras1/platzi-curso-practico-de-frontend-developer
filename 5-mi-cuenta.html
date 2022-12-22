@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <title>Create password</title>
+    <title>My account</title>
 
     <style>
         :root {
@@ -32,52 +32,35 @@
             display: grid;
             place-items: center;
         }
-        .form-container {
+        .account-container {
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
         }
-        .logo {
-            width: 150px;
-            margin-bottom: 50px;
-            justify-self: center;
-        }
         .title {
             font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .subtitle {
-            color: var(--very-light-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .form {
-            display: flex;
-            flex-direction: column;
+            margin-bottom: 32px;
+            text-align: start;
         }
         .label {
             font-size: var(--sm);
             font-weight: bold;
             margin-bottom: 4px;
         }
-        .input {
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
+        .user-data {
+            color: var(--very-light-pink);
             font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+            margin: 8px 0 32px 0;
+        }
+        .account-form {
+            display: flex;
+            flex-direction: column;
         }
         .button {
-            background-color: var(--hospital-green);
+            background-color: var(--text-input-field);
             border-radius: 8px;
-            border: none;
-            color: var(--white);
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
@@ -89,22 +72,22 @@
 </head>
 <body>
     <section class="container">
-        <div class="form-container">
-            <img class="logo" src="./src/logos/logo_yard_sale.svg" alt="logo">
+        <div class="account-container">
+            <h1 class="title">My account</h1>  
 
-            <h1 class="title">Create new password</h1>
+            <form class="account-form" action="/">
+                <label class="label name" for="account-name">Name</label>
+                <p class="user-data user-name">Cristian Contreras</p>
 
-            <p class="subtitle">Enter a new password for your acount</p>
-            
-            <form class="form" action="/">
-                <label class="label password" for="password">Password</label>
-                <input class="input" placeholder="**********" type="password">
+                <label class="label email-address" for="account-address">Email address</label>
+                <p class="user-data user-email">example@example.com</p>
+                
+                <label class="label account-password" for="account-password">Password</label>
+                <p class="user-data user-password">**********</p>
 
-                <label class="label re-enter-password" for="re-enter-password">Re-enter password</label>
-                <input class="input" placeholder="**********" type="password">
-
-                <!-- button -->
-                <input class="button" type="submit" value="Confirm new password">
+                <!-- button login-->
+                <input class="button create-button" type="submit" value="Edit">
+                
             </form>
         </div>
     </section>
